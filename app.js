@@ -110,7 +110,7 @@ examplesSelector.addEventListener('change', loadExample, false);
 Object.keys(examples).forEach(function(k) {
     var option = document.createElement('option');
     option.value = k;
-    option.innerText = examples[k].name;
+    option.text = examples[k].name;
 
     examplesSelector.appendChild(option);
 });
