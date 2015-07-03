@@ -13,10 +13,10 @@ var examples = {
             "FROM cros_2011_r"
         ].join('\n'),
         cartocss: getCartoCss('cros_2011_r', [
-            'raster-opacity: 0.5;'
+            'raster-opacity: 0.7;'
         ]),
-        center: [20, 0],
-        zoom: 2
+        center: [20, 78],
+        zoom: 4
     },
     'cros_2001_r': {
         name: 'WorldBank CORS 2001 ST_ColorMap BLUERED',
@@ -26,9 +26,9 @@ var examples = {
             "FROM cros_2001_r"
         ].join('\n'),
         cartocss: getCartoCss('cros_2001_r', [
-            'raster-opacity: 0.5;'
+            'raster-opacity: 0.7;'
         ]),
-        center: [20, 0],
-        zoom: 2
+        center: [20, 78],
+        zoom: 4
     },
 };
