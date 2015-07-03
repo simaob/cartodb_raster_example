@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/codemirror/4.7.0/codemirror.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/codemirror/4.7.0/theme/monokai.min.css">
+
+    <style>
+        body {
+            margin: 16px;
+            padding: 0;
+            border: 0;
+            font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+        }
+        textarea {
+            padding: 0;
+            margin: 0;
+            border: solid 1px #999;
+            height: 64px;
+        }
+        .wrap {
+            width: 960px;
+            margin: 0 auto;
+        }
+        .loader, .editor {
+            border-bottom: solid 1px #666;
+            padding: 16px 0;
+        }
+        .loader input, .loader select {
+            margin: 0 24px;
+        }
+        .loader input {
+            width: 320px;
+        }
+        .editor label {
+            width: 480px;
+            margin-bottom: 12px;
+            display: block;
+            float: left;
+        }
+        .CodeMirror {
+            float: left;
+            width: 479px;
+            border-left: 1px solid #fff;
+            height: 160px;
+        }
+        #map {
+            clear: both;
+            width: 960px;
+            height: 480px;
+            margin-top: 16px;
+        }
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <form class="loader">
+            <label for="examples">Examples</label>
+            <select name="examples" id="examples"></select>
+
+            <label for="endpoint">Maps API endpoint</label>
+            <!--input type="text" name="endpoint" id="endpoint" value="http://rochoa.cartodb.com/api/v1/map"-->
+            <input type="text" name="endpoint" id="endpoint" value="http://worldbank-southasia.cartodb.com/api/v1/map">
+        </form>
+        <form class="editor">
+            <label for="sql_editor">SQL</label>
+            <label for="css_editor">CartoCSS</label>
+            <textarea id="sql_editor" class="code"></textarea>
+            <textarea id="css_editor" class="code"></textarea>
+            <div class="clear"></div>
+        </form>
+        <div id="map"></div>
+    </div>
+</body>
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/codemirror/4.7.0/codemirror.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/codemirror/4.7.0/mode/css/css.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/codemirror/4.7.0/mode/sql/sql.min.js"></script>
+
+<script src="examples.js"></script>
+<script src="app.js"></script>
+
+</html>
