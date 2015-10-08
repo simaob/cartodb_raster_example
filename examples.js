@@ -10,7 +10,7 @@ var examples = {
         desc: 'Worldbank example 2011',
         sql: [
             "SELECT ST_ColorMap(the_raster_webmercator,'bluered') the_raster_webmercator",
-            "FROM cros_2011_r"
+            "FROM dens_built_up_2001_rural_tiles"
         ].join('\n'),
         cartocss: getCartoCss('cros_2011_r', [
             'raster-opacity: 0.7;'
